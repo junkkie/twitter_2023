@@ -73,9 +73,9 @@ function TweetInsert({userObj}) {
         <label htmlfor='attachFile' className='InsertInput_label'>
           <span>Add photos</span>
           <FontAwesomeIcon icon='fa-solid fa-plus' />
+          {/* form의 label for, input id 연결하면 label만 클릭해도 input으로 연결된다 */}
+          <input type='file' id='attachFile' accept='image/*' onChange={onFileChange} style={{opacity:0,width:0,height:0}} /> 
         </label>
-        {/* form의 label for, input id 연결하면 label만 클릭해도 input으로 연결된다 */}
-        <input type='file' id='attachFile' accept='image/*' onChange={onFileChange} style={{opacity:0}} /> 
         {attachment && (
           <div className='InsertForm_attachment'>
             <img src={attachment} alt="" style={{backgroundImage:attachment}} />
