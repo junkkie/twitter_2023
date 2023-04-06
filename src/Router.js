@@ -8,7 +8,7 @@ import Profiles from './routes/Profiles';
 function AppRouter({isLoggedIn, userObj}) {
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       {isLoggedIn && <Navigation userObj={userObj} />} 
       {/* && 연산자: true이면 실행하고, false이면 실행 안 함 */}
       <Routes>
